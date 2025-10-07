@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VetTrack</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- CSS Linking here... -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Bootstrap Included -->
+     <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"> -->
+</head>
+<body>
+    <header>
+        <nav>
+            <div id="logo">
+                <i class="fa-solid fa-shield-heart"></i>
+                <span>VetTrack</span>
+            </div>
+            <div id="listItems">
+                <ul>
+                    <li><a href="#first">Home</a></li>
+                    <li><a href="#second">Animals</a></li>
+                    <li><a href="#container">Vaccinations</a></li>
+                    <li><a href="#forth">Appointment</a></li>
+                    <li><a href="">Dashboard</a></li>
+                    <li><a href="">Blogs</a></li>
+                </ul>
+            </div>
+            <div id="btn">
+                <button><a href="">Sign In</a></button>
+                <button><a href="">Get Started</a></button>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div id="first">
+            <section id="heading">
+                <h1>Smart LiveStock</h1>
+                <h1>Health management</h1>
+            </section>
+            <p>Track Vaccinations, monitor health and book veterinary visits for your cows and Goats. Reduce disease risks and improve animal care with intelligent alerts and reminders
+            </p>
+            <section id="button">
+                <button id="btn1"><a href="#second">Register Your Animals</a></button>
+                <button id="btn2"><a href="#forth">Book a Vet Visit</a></button>
+            </section>
+            <section id="cards">
+                <div id="card">
+                    <div>
+                        <i class="fa-solid fa-clipboard-list"></i>
+                    </div>
+                    <h3>Health Monitoring</h3>
+                    <p>Track your Animal health and get alerts</p>
+                    
+                </div>
+                <div id="card">
+                    <div>
+                        <i class="fa-regular fa-calendar"></i>  
+                    </div>
+                    <div>
+                        <h3>Vaccination Tracker</h3>
+                        <p>Never miss a vaccination date again</p>
+                    </div>
+                </div>
+                <div id="card">
+                    <div>
+                        <i class="fa-solid fa-user-group"></i>
+                        
+                    </div>
+                    <div>
+                        <h3>Vet Booking</h3>
+                        <p>Book home visits from local veterinarians</p>
+                    </div>
+                </div>
+                <div id="card">
+                    <div>
+                        <i class="fa-solid fa-chart-line"></i>
+                    </div>
+                    <div>
+                        <h3>Smart Analytics</h3>
+                        <p>Get insights to improve livestock care</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <div id="second">
+            <section id="second-heading">
+                <h1>Animal Management </h1>
+                <p>Register and manage your livestock profiles with detailed health tracking</p>
+            </section>
+            <section id="form-filling">
+                <div id="forms">
+                    <h2><i class="fa-solid fa-plus"></i> Register New Animal</h2>
+                    <p>Add a new animal to your livestock management system</p>
+
+                    <form action="post">
+                        <div id="row1">
+                            <div>
+                                <label for="animalsName">Animal Name*</label>
+                                <input type="text" name="animalsName" id="animalsName" placeholder="e.g.. Bella" required>
+                            </div>
+                            <div>
+                                <label for="animalsType">Animal Type*</label>
+                                <select name="animalsType" id="animalsType" required>
+                                    <option value="" disabled selected hidden>Select type</option>
+                                    <option value="Cow">Cow</option>
+                                    <option value="Goat">Goat</option>
+                                    <option value="Sheep">Sheep</option>
+                                    <option value="Buffalo">Buffalo</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div id="row2">
+                            <div>
+                                <label for="breeds">Breed</label>
+                                <input type="text" name="breeds" id="breeds" placeholder="e.g.. Holstein" required>
+                            </div>
+                            <div>
+                                <label for="ages" >Age</label>
+                                <input type="text" name="ages" id="ages" placeholder="e.g.. 3 years" required>
+                            </div>
+                        </div>
+                        <label for="medicalHistory">Medical History*</label>
+                        <textarea name="history" id="medicalHistory"  rows="5" placeholder="Any previous illness, treatments, or notes..." required></textarea>
+                        
+                        <button id="registerAnimal" type="submit">Register Animal</button>
+                    </form>
+                </div>
+                <div id="result_display">
+                    <h2>Your Animals</h2>
+                    <div id="resultDisplayMainContent">
+                        <div id="result_displayDatacomehere">
+                            <i id="bigIcon" class="fa-solid fa-layer-group"></i>
+                            <div><h1>No Data Available</h1></div>
+                        </div>
+                    </div>
+                  <!-- displayresult block ends here ok -->
+                  <!-- copy block code here and add below -->
+                   <!-- The block code is provided by the JS -->
+                </div>
+            </section>
+        </div>
+
+        <div id="third">
+            <div id="container">
+                <h1 class="title center">Vaccination Tracker</h1>
+                <p class="subtitle center">Keep track of all vaccinations and never miss important dates</p>
+
+                <div class="tracker-cards">
+                    <div class="card red">
+                        <i class="fa-solid fa-circle-exclamation"></i>
+                        <div>
+                            <h2>2</h2>
+                            <p>Overdue Vaccinations</p>
+                        </div>
+                    </div>
+                    <div class="card yellow">
+                        <i class="fa-solid fa-calendar-days"></i>
+                        <div>
+                            <h2>3</h2>
+                            <p>Due This Month</p>
+                        </div>
+                    </div>
+                    <div class="card green">
+                        <i class="fa-solid fa-circle-check"></i>
+                        <div>
+                            <h2>18</h2>
+                            <p>Up to Date</p>
+                        </div>
+                    </div>
+                </div>
+
+                <section class="schedules">
+                    <h3 class="center"> Vaccination Schedule</h3>
+                    <p class="center">Track and manage all vaccination dates for your animals</p>
+                    <div id="connectedResult">
+                        
+                    </div>
+                
+                    <!-- <div class="animal-card">
+                        <div class="animal-info">
+                            <div id="animal-infoIcon"><i class="fa-solid fa-circle-exclamation"></i></div>
+                            <div class="info">
+                                <span><strong>Bella</strong> (Cow)</span>
+                                <div id="medicalInfoDetails">NA</div>
+                                <div id="dateSchedulingInfo">
+                                    <span>Last: <strong>No records</strong></span>
+                                    <span>Next: <strong>Schedule needed</strong></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="status">
+                            <span class="due-label">due</span>
+                            <button class="schedule-btn">Schedule</button>
+                        </div>
+                    </div> -->
+
+                    <button id="animal-cardBtn"><a href="">Add New Vaccination Record</a></button>
+                </section>
+            </div>
+
+            <div class="contactInfoContainer">
+                <!-- Set Reminders Block -->
+                <div class="ownerReachBlock">
+                    <h2>Set Reminders</h2>
+                    <p class="subtextofOwnerBlock">Get notified before vaccination dates</p>
+                    <ul class="reminder-list">
+                        <li class="liElHere" id="email_entryDisplayEl">Email notifications <button class="action-btn-of-owner-block" id="enable">Enable</button></li>
+                        <li class="liElHere" id="sms_entryDisplayEl">SMS alerts <button class="action-btn-of-owner-block" id="setup">Setup</button></li>
+                        <li class="liElHere" id="calendar_syncDisplayEl">Calendar sync <button class="action-btn-of-owner-block" id="connect">Connect</button></li>
+                    </ul>
+                </div>
+
+                <!-- Vaccination History Block -->
+                <div class="ownerReachBlock">
+                    <h2>Vaccination History</h2>
+                    <p class="subtextofOwnerBlock">View complete vaccination records</p>
+                    <p>Access detailed vaccination history and generate reports for all your animals.</p>
+                    <button class="history-btn-of-owner-block">View Full History</button>
+                </div>
+            </div>
+
+        </div> 
+        <!-- This is the third div end -->
+
+        <!-- Forth div code here.... -->
+        <div id="forth">
+            <div class="bv-section-main-heading">
+                <h2 class="bv-title">Book Veterinary Visit</h2>
+                <p class="bv-subtitle">Schedule home visits from qualified veterinarians in your area</p>
+            </div>
+
+            <div class="bv-container">
+                    <div class="bv-main">
+                        <h3 class="bv-section-heading">Available Veterinarians</h3>
+
+                        <div class="bv-vets-list" >
+                        <!-- Vet Card -->
+                            <div class="bv-vet-card" role="button">
+                                <div class="bv-vet-info">
+                                    <img src="https://img.icons8.com/ios-filled/50/4CAF50/stethoscope.png" alt="Doctor Icon" class="bv-icon" />
+                                    <div>
+                                        <h4 class="bv-vet-name">Dr. Priya Sharma</h4>
+                                        <p class="bv-speciality">Large Animal Medicine</p>
+                                        <div class="bv-details">
+                                            <span>🕒 8 years</span>
+                                            <span>📍 Within 5 km</span>
+                                            <span>📞 +91 98765 43210</span>
+                                        </div>
+                                        <span class="bv-badge">Available today</span>
+                                    </div>
+                                </div>
+                                <div class="bv-rating">⭐ 4.8</div>
+                            </div>
+                            
+
+                            <div class="bv-vet-card" role="button">
+                                <div class="bv-vet-info">
+                                    <img src="https://img.icons8.com/ios-filled/50/4CAF50/stethoscope.png" alt="Doctor Icon" class="bv-icon" />
+                                    <div>
+                                        <h4 class="bv-vet-name">Dr. Radha Krishnan</h4>
+                                        <p class="bv-speciality">Large Animal Medicine</p>
+                                        <div class="bv-details">
+                                            <span>🕒 8 years</span>
+                                            <span>📍 Within 5 km</span>
+                                            <span>📞 +91 98765 43210</span>
+                                        </div>
+                                        <span class="bv-badge">Available today</span>
+                                    </div>
+                                </div>
+                                <div class="bv-rating">⭐ 4.8</div>
+                            </div>
+                            <div class="bv-vet-card" role="button">
+                                <div class="bv-vet-info">
+                                    <img src="https://img.icons8.com/ios-filled/50/4CAF50/stethoscope.png" alt="Doctor Icon" class="bv-icon" />
+                                    <div>
+                                        <h4 class="bv-vet-name">Dr. Sumati Shukla</h4>
+                                        <p class="bv-speciality">Large Animal Medicine</p>
+                                        <div class="bv-details">
+                                            <span>🕒 8 years</span>
+                                            <span>📍 Within 5 km</span>
+                                            <span>📞 +91 98765 43210</span>
+                                        </div>
+                                        <span class="bv-badge">Available today</span>
+                                    </div>
+                                </div>
+                                <div class="bv-rating">⭐ 4.8</div>
+                            </div>
+
+                        </div>
+                        <!-- vet card list ends here -->
+                    </div>
+                    <!-- bv-main end -->
+
+                    <!-- Booking Form -->
+                    <div class="bv-form-container">
+                        <h3 class="bv-form-heading">📅 Book Appointment</h3>
+                        <p class="bv-form-subtitle">Schedule a visit with your selected veterinarian</p>
+
+                        <div class="bv-form">
+                        
+                            <div id="bv-disabled-field" class="style" >Please select a veterinarian first</div>
+
+                            <label>Select Animal *</label>
+                            <select id="animalNameforAppoin" required >
+                                <option value="" disabled selected hidden>Choose animal</option>
+                                <option value="Bella">Bella</option>
+                                <option value="Charlie">Charlie</option>
+                                <option value="Kamdhenu">Kamdhenu</option>
+                                <option value="Chakuli">Chakuli</option>
+                            </select>
+
+                            <label>Service Required *</label>
+                            <select id="animalHealthConditionofAppoin" required>
+                                <option value="" disabled selected hidden>Select service</option>
+                                <option value="General Health Checkup">General Health Checkup</option>
+                                <option value="Vaccination">Vaccination</option>
+                                <option value="Disease Treatment">Disease Treatment</option>
+                                <option value="Emergency Care">Emergency Care</option>
+                                <option value="Breeding Consultation">Breeding Consultation</option>
+                            </select>
+
+                            <label>Preferred Date *</label>
+                            <input type="date" id="dateSelectedforAppoin" required>
+
+                            <label>Preferred Time *</label>
+                            <select id="timeSelectedforAppoin" required >
+                                <option value="" disabled selected hidden>Select time</option>
+                                <option value="09:00 AM">09:00 AM</option>
+                                <option value="10:00 AM">10:00 AM</option>
+                                <option value="11:00 AM">11:00 AM</option>
+                                <option value="02:00 PM">02:00 PM</option>
+                                <option value="03:00 PM">03:00 PM</option>
+                                <option value="04:00 PM">04:00 PM</option>
+                            </select>
+
+                            <label>Additional Notes</label>
+                            <textarea placeholder="Describe symptoms or specific concerns..." required></textarea>
+
+                            <button id="bv-btn" disabled type="submit">Confirm Booking</button>
+
+                            <p class="bv-emergency">Emergency? Call directly: <strong>+91 8010610593</strong></p>
+                        </div>
+                    </div>
+            </div>
+
+            <div class="booking-section">
+                <h3>Recent Bookings</h3>
+                <p>Your upcoming and past veterinary appointments</p>
+        
+            </div>
+        </div> 
+
+
+
+
+
+    </main>
+
+    <script src="script.js"></script>
+    <script src="script_part2.js"></script>
+</body>
+</html>
+
+
